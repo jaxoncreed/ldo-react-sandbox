@@ -10,6 +10,7 @@
     "@types/node": "^16.11.64",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "ldo": "^0.0.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -17,10 +18,11 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "BROWSER=firefox react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:ldo": "ldo build --input src/shapes --output src/ldo"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +41,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/jsonld": "^1.5.6",
+    "@types/shexj": "^2.1.1",
+    "ldo-cli": "^0.1.4"
   }
 }
